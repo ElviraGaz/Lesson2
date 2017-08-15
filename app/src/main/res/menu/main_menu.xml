@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/addValue"
+        android:actionLayout="@layout/activity_main"
+        android:title="Прибавить число" />
+    <item
+        android:id="@+id/questions"
+        android:actionLayout="@layout/questions"
+        android:title="Ответить на вопросы" />
+    <item
+        android:id="@+id/recycler"
+        android:actionLayout="@layout/activity_countries"
+        android:title="Страны" />
+</menu>
