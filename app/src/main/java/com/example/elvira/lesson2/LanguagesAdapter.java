@@ -47,6 +47,8 @@ class LanguagesAdapter extends RecyclerView.Adapter<LanguagesViewHolder> {
         TextView areaView = holder.textView;
         areaView.setText(area);
 
+        holder.likeCounterView.setText(languages.get(position).getLikeCount().toString());
+
         final LinearLayout layout = holder.lenearLayout;
         if (languages.get(position).getSelected().equals(false))
             layout.setBackgroundColor(Color.WHITE);
@@ -56,7 +58,7 @@ class LanguagesAdapter extends RecyclerView.Adapter<LanguagesViewHolder> {
             holder.lenearLayout.setBackgroundColor(Color.WHITE);
 
         else holder.lenearLayout.setBackgroundColor(Color.YELLOW);
-
+        holder.likeCounterView.setText(languages.get(position).getLikeCount().toString());
 
         View.OnClickListener listenerLike = new View.OnClickListener() {
             @Override

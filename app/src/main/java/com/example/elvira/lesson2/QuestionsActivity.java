@@ -54,11 +54,13 @@ public class QuestionsActivity extends AppCompatActivity {
                     public void run() {
                         v.setBackgroundColor(Color.GREEN);
                         Toast.makeText(QuestionsActivity.this, "Молодец!", LENGTH_SHORT).show();
+                        correctAnswerCount++;
+                        correctAnswerLabel.setText("Количество правильных ответов: " + correctAnswerCount);
                     }
                 }, 1000);
 
-                correctAnswerCount++;
-                correctAnswerLabel.setText("Количество правильных ответов: " + correctAnswerCount);
+
+
             }
         };
 
@@ -78,10 +80,12 @@ public class QuestionsActivity extends AppCompatActivity {
                     public void run() {
                         v.setBackgroundColor(Color.RED);
                         Toast.makeText(QuestionsActivity.this, "Ой! Это неправильный ответ!", LENGTH_SHORT).show();
+                        correctAnswerCount = 0;
+                        correctAnswerLabel.setText("Количество правильных ответов: " + correctAnswerCount);
                     }
                 }, 1000);
-                correctAnswerCount = 0;
-                correctAnswerLabel.setText("Количество правильных ответов: " + correctAnswerCount);
+
+
             }
         };
 
