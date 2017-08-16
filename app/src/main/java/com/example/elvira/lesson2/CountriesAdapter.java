@@ -32,14 +32,14 @@ class CountriesAdapter extends RecyclerView.Adapter<CountriesViewHolder> {
     @Override
     public void onBindViewHolder(final CountriesViewHolder holder, int position) {
         // Название страны
-        String cityName = countries.get(position).getName();
-        TextView cityNameView = holder.capitalNameView;
-        cityNameView.setText(cityName);
-
-        // Столица
-        String countryName = countries.get(position).getCapital();
+        String countryName = countries.get(position).getName();
         TextView countryNameView = holder.countryNameView;
         countryNameView.setText(countryName);
+
+        // Столица
+        String capital = countries.get(position).getCapital();
+        TextView capitalNameView = holder.capitalNameView;
+        capitalNameView.setText(capital);
 
         //Площадь
         String area = countries.get(position).getArea();
@@ -51,15 +51,6 @@ class CountriesAdapter extends RecyclerView.Adapter<CountriesViewHolder> {
         ImageView flagView = holder.flagView;
         flagView.setBackgroundResource(flag);
 
-
-        View.OnClickListener onClickListener = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Integer result = Integer.parseInt(holder.likeCounterView.getText().toString()) + 1;
-                holder.likeCounterView.setText(result.toString());
-            }
-        };
-        holder.likeCounterView.setOnClickListener(onClickListener);
     }
 
     @Override
@@ -67,9 +58,4 @@ class CountriesAdapter extends RecyclerView.Adapter<CountriesViewHolder> {
         return countries.size();
     }
 
-
-    public void add(int i, List<CountryModel> newlist) {
-        countries.addAll(i, newlist);
-        notifyItemRangeInserted(i, newlist.size());
-    }
 }

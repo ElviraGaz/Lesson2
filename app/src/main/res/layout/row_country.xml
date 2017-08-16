@@ -11,8 +11,8 @@
 
     <ImageView
         android:id="@+id/flag"
-        android:layout_width="60dp"
-        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginRight="32dp" />
 
     <LinearLayout
@@ -24,7 +24,6 @@
             android:id="@+id/country_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Россия"
             android:textColor="#000000"
             android:textSize="18sp" />
 
@@ -33,45 +32,13 @@
             android:id="@+id/capital"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Москва"
             android:textSize="15sp" />
 
         <TextView
             android:id="@+id/area"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="1556"
             android:textSize="12sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="right"
-        android:layout_marginLeft="100dp"
-        android:layout_marginRight="16dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/like_count"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:text="0"
-            android:textSize="20sp" />
-
-        <ImageView
-            android:id="@+id/like_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/like" />
-
-        <ImageView
-            android:id="@+id/dislike_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/dislike" />
     </LinearLayout>
 
 </LinearLayout>

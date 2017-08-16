@@ -9,7 +9,6 @@ public class CountryModel {
     String capital;
     String area;
     Integer flag;
-    Integer likeCount;
 
     public CountryModel(String name, String capital,String area, Integer flag) {
         this.name = name;
@@ -34,15 +33,4 @@ public class CountryModel {
         return flag;
     }
 
-    public void like(){
-        likeCount++;
-    }
-
-    public void dislike(){
-        likeCount--;
-    }
-
-    public Integer getLikeCount(){
-        return likeCount;
-    }
 }

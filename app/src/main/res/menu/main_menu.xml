@@ -12,4 +12,9 @@
         android:id="@+id/recycler"
         android:actionLayout="@layout/activity_countries"
         android:title="Страны" />
+    <item
+        android:id="@+id/languages"
+        android:actionLayout="@layout/activity_program_languages"
+        android:title="Языки программирования"
+        />
 </menu>

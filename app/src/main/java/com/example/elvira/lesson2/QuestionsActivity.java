@@ -164,6 +164,9 @@ public class QuestionsActivity extends AppCompatActivity {
             case R.id.recycler:
                 startActivity(new Intent(QuestionsActivity.this, CountriesActivity.class));
                 return true;
+            case R.id.languages:
+                startActivity(new Intent(QuestionsActivity.this, ProgramLanguagesActivity.class));
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }

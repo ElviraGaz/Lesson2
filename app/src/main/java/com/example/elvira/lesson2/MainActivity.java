@@ -82,6 +82,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.recycler:
                 startActivity(new Intent(MainActivity.this, CountriesActivity.class));
                 return true;
+            case R.id.languages:
+                startActivity(new Intent(MainActivity.this, ProgramLanguagesActivity.class));
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }

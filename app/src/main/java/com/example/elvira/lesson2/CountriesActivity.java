@@ -11,9 +11,6 @@ import android.support.v7.widget.RecyclerView.LayoutManager;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +24,8 @@ public class CountriesActivity extends AppCompatActivity {
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        List<CountryModel> countiesList = addCountris();
+
+        List<CountryModel> countiesList = addCountries();
 
         final CountriesAdapter countriesAdapter = new CountriesAdapter(countiesList);
         recyclerView.setAdapter(countriesAdapter);
@@ -39,12 +37,10 @@ public class CountriesActivity extends AppCompatActivity {
         // Создаём и задаём класс, отвечающий за анимации
         RecyclerView.ItemAnimator itemAnimator = new DefaultItemAnimator();
         recyclerView.setItemAnimator(itemAnimator);
-        countriesAdapter.add(countiesList.size(), countiesList);
-
 
     }
 
-    private List<CountryModel> addCountris(){
+    private List<CountryModel> addCountries(){
         List<CountryModel> list = new ArrayList<>();
         list.add(new CountryModel("Абхазия", "Сухум", "8600", R.drawable.abkhazia));
         list.add(new CountryModel("Азербайджан", "Баку", "86600", R.drawable.azerbaijan));
@@ -53,7 +49,7 @@ public class CountriesActivity extends AppCompatActivity {
         list.add(new CountryModel("Бельгия", "Брюссель", "32545", R.drawable.belgium));
         list.add(new CountryModel("Босния и Герцеговина", "Сараево","51129",R.drawable.bosniaandherzegovina));
         list.add(new CountryModel("Бразилия", "Бразилиа", "8511965", R.drawable.brazil));
-        list.add(new CountryModel("Ватикан", "Ватикан", "0.44", R.drawable.vaticancty ));
+        list.add(new CountryModel("Ватикан", "Ватикан", "0.44", R.drawable.vaticancity ));
         list.add(new CountryModel("Венесуэла", "Каракас","912050" , R.drawable.venezuela));
         list.add(new CountryModel("Гаити", "Порт-о-Пренс", "27750", R.drawable.haiti));
         list.add(new CountryModel("Греция", "Афины","131940", R.drawable.greece ));
@@ -90,6 +86,9 @@ public class CountriesActivity extends AppCompatActivity {
                 return true;
             case R.id.questions:
                 startActivity(new Intent(CountriesActivity.this, QuestionsActivity.class));
+                return true;
+            case R.id.languages:
+                startActivity(new Intent(CountriesActivity.this, ProgramLanguagesActivity.class));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

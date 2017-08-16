@@ -17,7 +17,6 @@ class CountriesViewHolder extends ViewHolder {
 
     public TextView countryNameView;
     public TextView capitalNameView;
-    public TextView likeCounterView;
     public TextView areaView;
     public ImageView flagView;
 
@@ -25,7 +24,6 @@ class CountriesViewHolder extends ViewHolder {
         super(itemView);
         countryNameView = (TextView) itemView.findViewById(R.id.country_name);
         capitalNameView = (TextView) itemView.findViewById(R.id.capital);
-        likeCounterView = (TextView) itemView.findViewById(R.id.like_count);
         areaView = (TextView) itemView.findViewById(R.id.area);
         flagView = (ImageView) itemView.findViewById(R.id.flag);
     }
